@@ -1,0 +1,38 @@
+#grad {
+    background-image: linear-gradient(red, yellow);
+  }
+  h1 {
+  font-size:xx-large;
+  color: black;
+}
+h3{
+    font-display:inherit;
+    font-style:unset;
+}
+.city0{
+  text-align: center;
+
+}
+
+.city {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 10%;
+    margin: 10px;
+    padding-bottom: 40px;
+    margin-left:38% ;
+    margin-right:38% ;
+  }
+  
+.city1 {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 10%;
+  margin: 10px;
+  padding-bottom: 40px;
+  margin-left:37% ;
+  margin-right:37% ;
+}
+.city3{
+  text-align: center;
+}

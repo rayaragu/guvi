@@ -1,0 +1,39 @@
+#grad {
+    background-image: linear-gradient(red, yellow);
+  }
+  h1 {
+  font-size:xx-large;
+  color: black;
+}
+$bgcolor: white;
+$bd: 2px solid black;
+$br: 10%;
+$m: 10px;
+$pd: 40px;
+$ml:37%;
+$mr: 37%;
+
+h3{
+    font-display:inherit;
+    font-style:unset;
+}
+
+.city {
+    background-color: $bgcolor;
+    border: $bd;
+    border-radius: $br;
+    margin: $m;
+    padding-bottom: $pd;
+    margin-left: $ml;
+    margin-right: $mr;
+  } 
+  
+.city1 {
+    background-color: $bgcolor;
+    border: $bd;
+    border-radius: $br;
+    margin: $m;
+    padding-bottom: $pd;
+    margin-left: $ml;
+    margin-right: $mr;
+}

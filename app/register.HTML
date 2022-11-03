@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="filecss.css">
+    <php src="phpfile.php"></php>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <tr></tr>
+    <div class="city0">
+    <table width="100%">
+        <tr><td> <img src=KSR.jpg
+          align="left" width="100px"></td>
+        <td>
+          <h1><b>K.S.R COLLEGE OF ENGINEERING</b></h1>
+          <h3>(AUTONOMOUS)</h3>
+        <h3>K.S.R. Kalvi Nagar, Tiruchengode - 637 215 , Namakkal (D.t), Tamilnadu, India.</h3></td>
+          <td><img src=KSRS.jpg   
+            align="right" width="100px" height="120px"></td>
+        </tr>
+        <table style="background-color:black; width:100%" ><th></th><th></th><th></th><th></th></table>
+        <br>
+        </table>
+     
+    <div class="city1">
+<form action="phpfile.php"method="post">
+    <h2><u>REGISTER</u></h2><br>
+  <label for="username">Roll-Number:</label>
+  <input type="number" id="Number" name="Number" required placeholder="Roll-Number" aria-required="true"><br><br>
+  <label for="Email">Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+  <input type="text" id="Email" name="Email"required placeholder="Email"><br><br>
+  <label for="pwd">Password:&nbsp&nbsp&nbsp</label>
+  <input type="password" id="myInput" name="Setpassword" required placeholder="password"><br><br>
+<input type="checkbox" onclick="myFunction()">Show Password
+  <br>
+  <br>
+  <input type="Submit" value="Submit"></form>
+  <br>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+    <script type="text/javascript">
+      function submitForm()
+      {
+        var Number = $('input[name=Number]').val();
+        var Email = $('input[name=Email]').val();
+        var password = $('input[name=password]').val();
+  
+        if(name != '' && phone!= '' && email != '')
+        {
+          var formData = {name: name, phone: phone, email: email};
+          $('#message').html('<span style="color: red">Processing form. . . please wait. . .</span>');
+          $.ajax({url: "http://localhost/ajaxform/api/submit.php", type: 'POST', data: formData, success: function(response)
+          {
+            var res = JSON.parse(response);
+            console.log(res);
+            if(res.success == true)
+              $('#message').html('<span style="color: green">Form submitted successfully</span>');
+            else
+              $('#message').html('<span style="color: red">Form not submitted. Some error in running the database query.</span>');
+          }
+          });
+        }
+        else
+        {
+          $('#message').html('<span style="color: red">Please fill all the fields</span>');
+        }
+        
+        
+      } 
+    </script>
+<p>Already have an account?
+    <a href="login.html">LOGIN</a></p>
+  </div>
+    </div>
+</body>
+</html>
+
